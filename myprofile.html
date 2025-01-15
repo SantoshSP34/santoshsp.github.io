@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script>
+        function toggleDetails(link) {
+            
+            var moreInfo = link.nextElementSibling;
+
+            
+            if (moreInfo) {
+                if (moreInfo.style.display === "none" || moreInfo.style.display === "") {
+                    moreInfo.style.display = "block"; 
+                } else {
+                    moreInfo.style.display = "none"; 
+                }
+            }
+        }
+    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e9ecef;
+            color: #343a40;
+        }
+
+        header {
+            background-color: #007bff;
+            margin: 0 205px;
+            color: white;
+            padding: 20px;
+            text-align: left;
+            border-radius: 8px;
+            display: flex;
+            align-items: center
+        }
+
+        header img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .section {
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+
+        h1,
+        h2 {
+            color: black;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        li:hover {
+            background-color: #f1f1f1;
+        }
+        .more-info {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            border-top: 1px solid #007bff;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="C:\Users\Lenovo\Pictures\login.png" alt="Profile Picture"> 
+        <div>
+            <h1>Santosh S P</h1>
+            <p>Full Stack Developer</p>
+        </div>
+    </header>
+
+    <div class="section">
+        <h2>Experience</h2>
+        <p>2 years of experience as a Software Engineer specializing in Full Stack Development.</p>
+
+        <p>Smartborn Software Consulting Pvt Ltd, Bengaluru </p>
+        <p>Duration :From August 2022, </p>
+        <p>Designation :Software Engineer </p>
+    </div>
+
+    <div class="section">
+        <h2>Technical Skills</h2>
+        <ul>
+            <li>Frontend: Angular 11
+                <a onclick="toggleDetails(this)"> see more</a>
+                <div class="more-info">
+                    <p>Core Angular Concepts:<br>
+                        Components, Modules, Services, Directives <br>
+                        Dependency Injection <br>
+                        Change Detection <br>
+                        Routing <br>
+                        RESTful API Integration:
+Integrating with backend APIs to fetch and manage data<br>
+                        </p>                </div>
+
+            </li>
+            <li>Backend: Java,Spring Boot
+                <a onclick="toggleDetails(this)"> see more</a>
+                <div class="more-info">
+                    <p>• Create classes and Objects and add methods to a class. <br>
+                        • Excellent in Inheritance and Polymorphism. <br>
+                        • Sound knowledge JPA Repository  <br>
+                        • Knowledge of Stream API methods  <br>
+                        • Knowledge of Java bean class and Singleton class. <br>
+                        • Interfaces,Collection Frame work(HasMap,HasSet,List) <br>
+                        • JDBC Hibernate ,Spring Boot REST API <br>
+                        </p>                </div> </li>
+            <li>Databases: MongoDB, MySQL
+                <a onclick="toggleDetails(this)"> see more</a>
+                <div class="more-info">
+                    <p> Knowledge on SQL programming in Oracle10g. <br>
+                        • Written SQL queries for DML, DDL. <br>
+                        • Knowledge on DQL, DCL operation. <br>
+                        • Good knowledge of SQL sub queries, Joins and predefined functions. <br>
+                        MongoDB Database Design: <br>
+                        • Experience in designing schemas, collections, and documents.<br>
+                        • CRUD Operations: Proficiency in creating, reading, updating, and deleting data using MongoDB.<br>
+                        • Aggregation Framework: Knowledge of using the aggregation pipeline for data processing and analysis using java script.<br>
+                        • Indexing: Understanding of indexing strategies to optimize query performance.<br>
+                        </p>                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Projects</h2>
+        <ul>
+            <li>
+                <strong>Audit Tool</strong>: The Compliance Audit Tool is a web application designed to facilitate the auditing process by providing a structured framework for checking compliance with various standards, clauses, and regulatory requirements.
+                <br>
+                <a onclick="toggleDetails(this)">View Project</a>
+                <div class="more-info">
+                    <p>This tool streamlines the audit process, enabling organizations to ensure adherence to industry standards and improve overall governance.</p>
+                    <p>Technologies: HTML,JavaScript, Spring MVC,MySQL<br>Role: Full Stack Developer</p>
+                </div>
+            </li>
+            <li>
+                <strong>ProTrack</strong>ProTrack is an innovative material management system designed specifically for the material industry
+                       <br>
+                       <a onclick="toggleDetails(this)">View Project</a>
+                       <div class="more-info">
+                           <p> It provides organizations with a comprehensive solution to monitor and manage material inventory, usage, wastage, and coining processes. By leveraging ProTrack, businesses can optimize their material handling, reduce waste, and improve overall operational efficiency.</p>
+                           <p>Technologies: Angular 8, Spring Boot,MongoDB<br>Role: Full Stack Developer</p>
+                       </div>
+            </li>
+           
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Contact Information</h2>
+        <p>Email:santoshsp34@gmail.com</p>
+        <p>LinkedIn: <a href="linkedin.com/in/santosh-pujar-0369b192">linkedin.com/in/santosh-pujar-0369b192</a></p>
+    </div>
+
+    <footer>
+        <!-- <p>&copy; 2023 Your Name. All rights reserved.</p> -->
+    </footer>
+
+</body>
+
+</html>
